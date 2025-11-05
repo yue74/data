@@ -4,12 +4,12 @@ using namespace std;
 class gragh {
 private:
 	struct Edgenode {
-		int vertex;//»¡Î²ÐòºÅ
+		int vertex;//å¼§å°¾åºå·
 		int weight;
 		Edgenode* next;
 	};
 	struct Vertexnode {
-		int vertex;//»¡Í·
+		int vertex;//å¼§å¤´
 		Edgenode* firstedge;
 	};
 	int vertices;
@@ -40,7 +40,7 @@ gragh::~gragh() {
 	}
 	delete[]nodes;
 }
-void gragh::addedge(int u, int v, int w) {//Í·²å·¨
+void gragh::addedge(int u, int v, int w) {//å¤´æ’æ³•
 	Edgenode* newnode = new Edgenode;
 	newnode->vertex = v;
 	newnode->weight = w;

@@ -30,7 +30,7 @@ gragh::~gragh() {
     delete[] edges;
 }
 void gragh::addEdge(int u, int v, int w){
-    edges[u][v] = w;
+    edges[u][v] = w;//可以优化为edges[u][v] = min(edges[u][v],w);
 }
 void gragh::printgragh() {
     for (int i = 0; i<vertices; ++i) {
@@ -55,4 +55,5 @@ int main() {
     g.printgragh();
 
     return 0;
+
 }
